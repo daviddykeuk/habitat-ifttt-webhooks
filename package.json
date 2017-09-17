@@ -1,0 +1,23 @@
+{
+    "name": "habitat-ifttt-webhooks",
+    "version": "1.0.0",
+    "description": "posts to ifttt webhooks on events",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server.js",
+        "test": "mocha ./test/*/*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/daviddykeuk/habitat-ifttt-webhooks.git"
+    },
+    "author": "David Dyke",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/daviddykeuk/habitat-ifttt-webhooks/issues"
+    },
+    "homepage": "https://github.com/daviddykeuk/habitat-ifttt-webhooks#readme",
+    "dependencies": {
+        "jetstream-microservice": "^0.1.3"
+    }
+}
