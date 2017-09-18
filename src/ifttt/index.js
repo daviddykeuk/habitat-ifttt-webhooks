@@ -32,6 +32,23 @@ Ifttt.prototype.fireEvent = function(args) {
             console.log("Webhook fired");
         }
     });
+
+    // testing zapier
+    var zap = {
+        url: "https://hooks.zapier.com/hooks/catch/1296506/rl71ws/",
+        method: "POST",
+        json: {
+            message: args.message
+        }
+    }
+
+    request(zap, (err, resp) => {
+        if (err) {
+            console.log("Zap didn't fire");
+        } else {
+            console.log("Zap fired");
+        }
+    });
 }
 
 module.exports = Ifttt;
