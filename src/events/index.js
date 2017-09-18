@@ -5,7 +5,7 @@ exports.registerEvents = function(eventListener, iftttEmitter) {
         var message = "The following trains are late: ";
 
         payload.forEach((train) => {
-            if (train.aimed_departure_time > "06:55" && train.aimed_departure_time < "08:30") {
+            if (train.aimed_departure_time > "07:20" && train.aimed_departure_time < "08:00" && train.destination_name === "London Cannon Street") {
                 validTrains++;
                 message += train.aimed_departure_time;
                 message += " (";
@@ -28,7 +28,7 @@ exports.registerEvents = function(eventListener, iftttEmitter) {
         var message = "The following trains have been cancelled: ";
 
         payload.forEach((train) => {
-            if (train.aimed_departure_time > "06:55" && train.aimed_departure_time < "08:30") {
+            if (train.aimed_departure_time > "07:20" && train.aimed_departure_time < "08:00" && train.destination_name === "London Cannon Street") {
                 validTrains++;
                 message += train.aimed_departure_time;
                 message += ", ";
@@ -50,7 +50,7 @@ exports.registerEvents = function(eventListener, iftttEmitter) {
         var message = "The following trains are on time again: ";
 
         payload.forEach((train) => {
-            if (train.aimed_departure_time > "06:55" && train.aimed_departure_time < "08:30") {
+            if (train.aimed_departure_time > "07:20" && train.aimed_departure_time < "08:00" && train.destination_name === "London Cannon Street") {
                 validTrains++;
                 message += train.aimed_departure_time;
                 message += ", ";
